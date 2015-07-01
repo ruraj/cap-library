@@ -72,7 +72,9 @@ public class CapXmlBuilder {
     } catch (IOException e) {
       throw new RuntimeException(e);
     }
-    return writer.toString();
+    return writer.toString()
+            .replace("<alert>",
+                    "<alert xmlns=\"" + alert.getXmlns() + "\">");
   }
 
   /**

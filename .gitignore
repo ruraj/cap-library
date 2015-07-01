@@ -10,3 +10,6 @@ validator/war/WEB-INF/lib/appengine-api.jar
 
 .classpath
 .project
+*.iml
+java/target/
+java/out/

@@ -73,7 +73,7 @@ public class CapXmlParser {
 
     ImmutableMap.Builder<String, Schema> schemas = ImmutableMap.builder();
     for (int i = 0; i < xsds.length; i++) {
-      StreamSource cap = new StreamSource(CapXmlParser.class
+      StreamSource cap = new StreamSource(CapXmlParser.class.getClassLoader()
           .getResourceAsStream("schema/" + xsds[i]));
       try {
         schemas.put(xmlns[i], schemaFactory.newSchema(new Source[] { cap }));

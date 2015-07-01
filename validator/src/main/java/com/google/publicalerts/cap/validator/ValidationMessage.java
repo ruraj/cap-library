@@ -79,7 +79,6 @@ public class ValidationMessage implements Comparable<ValidationMessage> {
     return escapedMessage;
   }
 
-  @Override
   public int compareTo(ValidationMessage other) {
     // First, sort by line number
     int compareLineNumber = Integer.compare(lineNumber, other.lineNumber);
